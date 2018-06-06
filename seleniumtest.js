@@ -32,12 +32,3 @@ driver.get('http://www.google.com/ncr')
     .then(() => driver.wait(until.titleIs('webdriver - Google Search'), 1000))
     .then(() => driver.quit());
 
-var chromedriver = new Builder()
-    .forBrowser('chrome')
-    .build();
-
-chromedriver.get('http://www.google.com/ncr')
-    .then(() =>
-        driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN))
-    .then(() => driver.wait(until.titleIs('webdriver - Google Search'), 1000))
-    .then(() => driver.quit());
